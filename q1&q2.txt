@@ -2,7 +2,7 @@
 (=(power_of_four $x)
 (or (== (% $x 4) 0)  (== (% $x 4) 1))
 )
-!(power_of_four 0)
+!(power_of_four 4)
 
 
 //power of three
