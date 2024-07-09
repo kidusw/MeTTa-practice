@@ -1,0 +1,11 @@
+//power of four
+(=(power_of_four $x)
+(or (== (% $x 4) 0)  (== (% $x 4) 1))
+)
+!(power_of_four 0)
+
+
+//power of three
+(=(power_of_three $x)
+(or (== (% $x 3) 0)  (== $x 1))
+)
