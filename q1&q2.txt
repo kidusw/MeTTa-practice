@@ -1,11 +1,19 @@
 //power of four
-(=(power_of_four $x)
-(or (== (% $x 4) 0)  (== (% $x 4) 1))
-)
-!(power_of_four 4)
+(=(is_power_of_four $x)
+  (if (== $x 1)
+      true
+      (if (== (% $x 4) 0)
+          (is_power_of_four (/ $x 4))
+          false)))
+!(is_power_of_four 1)
 
 
 //power of three
-(=(power_of_three $x)
-(or (== (% $x 3) 0)  (== $x 1))
-)
+(=(is_power_of_three $x)
+  (if (== $x 1)
+      true
+      (if (== (% $x 3) 0)
+          (is_power_of_three (/ $x 3))
+          false)))
+
+!(is_power_of_three 9) 
